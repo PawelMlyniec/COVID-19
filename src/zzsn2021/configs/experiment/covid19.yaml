@@ -1,0 +1,20 @@
+# Specific experiments settings
+# (default settings inherited from configs.experiment.ExperimentSettings)
+
+defaults:
+  - schema_experiment
+
+_tags_:
+  - COVID19
+
+resume_checkpoint: ~
+# e.g. resume path from local file:
+# resume_checkpoint: ${oc.env:RESULTS_DIR}/${oc.env:WANDB_PROJECT}/20210422-1430-phenomenal-elephant/checkpoints/epoch_5.ckpt
+
+datamodule:
+  _target_: zzsn2021.datamodules.Covid19DataModule.Covid19DataModule
+
+batch_size: 8
+
+num_nodes: 21 # 3274 for full dataset
+node_features: 12

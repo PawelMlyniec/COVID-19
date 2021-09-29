@@ -1,0 +1,16 @@
+name: zzsn-mlyniec-belniak
+dependencies:
+  - python=3.8
+  - conda-forge::jupyterlab
+  - conda-forge::jupyterlab-lsp
+  - conda-forge::python-language-server
+  - conda-forge::nodejs
+  - numpy
+  - pandas
+  - pip
+  - scikit-learn
+  - pytorch::pytorch=1.8.1
+  - pytorch::torchvision=0.9.1
+  - cudatoolkit=11.1
+  - pip:
+      - -r file:requirements.txt
